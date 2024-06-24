@@ -22,16 +22,28 @@ export default function Navbar() {
         </div>
         <div className="flex md:order-2 gap-2">
           {isAuthUser ? (
+            <div className="flex px-6">
+              <Link href="/cart" className="pr-4">
+                <Image
+                  src="/assets/icons8-shopping-cart-50.png"
+                  alt="cart"
+                  width={35}
+                  height={26}
+                />
+              </Link>
+
+              <Link href="/">
+                <Button className="bg-black text-white" variant="outline">
+                  Logout
+                </Button>
+              </Link>
+            </div>
+          ) : (
             <Link href="/login">
-              {" "}
               <Button className="bg-black text-white" variant="outline">
                 Login
               </Button>
             </Link>
-          ) : (
-            <Button className="bg-black text-white" variant="outline">
-              Logout
-            </Button>
           )}
         </div>
 
