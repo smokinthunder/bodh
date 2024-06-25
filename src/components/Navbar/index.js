@@ -39,7 +39,7 @@ export default function Navbar() {
               </Link>
             </div>
           ) : (
-            <Link href="/login">
+            <Link href="/Auth/User">
               <Button className="bg-black text-white" variant="outline">
                 Login
               </Button>
