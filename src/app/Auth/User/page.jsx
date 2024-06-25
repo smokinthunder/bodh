@@ -1,4 +1,3 @@
-
 import React from "react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -13,10 +12,17 @@ export default function AuthUser() {
           src={"/assets/AuthPage/bodi-logo.png"}
           className="absolute left-0 top-0 h-20 "
         />
-        <Tabs defaultValue="login" className="w-[400px] flex flex-col items-center   ">
-          <TabsList >
-            <TabsTrigger className="rounded-l-2xl" value="login">Login</TabsTrigger>
-            <TabsTrigger className="rounded-r-2xl" value="signup">Sign Up</TabsTrigger>
+        <Tabs
+          defaultValue="login"
+          className="w-[400px] flex flex-col items-center   "
+        >
+          <TabsList>
+            <TabsTrigger className="rounded-l-2xl" value="login">
+              Login
+            </TabsTrigger>
+            <TabsTrigger className="rounded-r-2xl" value="signup">
+              Sign Up
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="login">
             <LoginCard />

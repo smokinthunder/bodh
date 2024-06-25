@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
 
-const isAuthUser = true;
+const isAuthUser = false;
 
 export default function Navbar() {
   return (
