@@ -1,10 +1,13 @@
-import Faq from "@/components/Faq";
+import Extra from "@/components/Homepage/Extra";
+import Faq from "@/components/Homepage/Faq";
+import Heading from "@/components/Homepage/Heading";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="p-4">
-      <h1>Bodhi Creations</h1>
+    <main>
+      <Heading />
+      <Extra />
       <Faq />
     </main>
   );
