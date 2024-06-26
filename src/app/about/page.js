@@ -133,7 +133,7 @@ const About = () => {
             <img
               loading="lazy"
               src="/assets/Small Photo.png"
-              className="absolute top-10 left-10 w-1/2 h-auto rounded-xl transform translate-x-1/4 translate-y-1/4 z-20"
+              className="absolute top-10 left-10 w-1/2 h-auto rounded-xl transform translate-x-1/4 translate-y-1/4 z-10"
             />
           </div>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full -mt-28 max-md:-mt-0">
