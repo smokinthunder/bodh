@@ -13,10 +13,30 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import axios from "axios";
 
 export default function LoginCard() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  function handleSubmit() {
+    const data = { phone: phone, password: password };
+    console.log(data);
+    axios({
+      method: "post",
+      url: "http://localhost:5000/api/auth/login",
+      data: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
+
   return (
     <Card className="flex flex-col items-center p-6">
       <CardHeader>
@@ -47,7 +67,9 @@ export default function LoginCard() {
             required
           ></Input>
         </div>
-        <Button className="w-full" onClick={()=>{console.log(phone+","+password)}}>Continue</Button>
+        <Button className="w-full" onClick={handleSubmit}>
+          Continue
+        </Button>
         <p className="text-xs text-muted-foreground  mb-6 mt-4">
           By Continuing you agree to our{" "}
           <a href="#" className="underline underline-offset-1 ">

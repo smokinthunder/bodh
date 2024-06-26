@@ -11,12 +11,32 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import axios from "axios";
+
 
 export default function SignUpCard() {
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
+  function handleSubmit() {
+    const data = {name:username , phone: phone, password: password , confirmPass: cpassword };
+    console.log(data);
+    axios({
+      method: "post",
+      url: "http://localhost:5000/api/auth/register",
+      data: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
 
   return (
     <Card className="flex flex-col items-center p-6">
@@ -72,7 +92,7 @@ export default function SignUpCard() {
             required
           ></Input>
         </div>
-        <Button className="w-full" onClick={()=>{console.log(username+","+phone+","+password+","+cpassword)}} >Create Account</Button>
+        <Button className="w-full" onClick={handleSubmit} >Create Account</Button>
         <p className="text-xs text-muted-foreground  mt-4">
           By Continuing you agree to our{" "}
           <a href="#" className="underline underline-offset-1 ">
