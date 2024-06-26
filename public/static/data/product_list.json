@@ -1,0 +1,196 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Gold Star Trophy",
+      "description": "A gold star trophy for outstanding performance.",
+      "price": 29.99,
+      "category": "Achievement",
+      "image_url": "http://example.com/images/gold_star_trophy.jpg",
+      "stock_quantity": 50,
+      "dimensions": {
+        "height": "12 inches",
+        "width": "5 inches"
+      },
+      "weight": "1.5 lbs",
+      "material": "Gold-plated metal",
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "name": "Silver Cup Trophy",
+      "description": "A silver cup trophy for second place winners.",
+      "price": 24.99,
+      "category": "Achievement",
+      "image_url": "http://example.com/images/silver_cup_trophy.jpg",
+      "stock_quantity": 40,
+      "dimensions": {
+        "height": "10 inches",
+        "width": "4 inches"
+      },
+      "weight": "1.2 lbs",
+      "material": "Silver-plated metal",
+      "rating": 4.5
+    },
+    {
+      "id": 3,
+      "name": "Bronze Medal Trophy",
+      "description": "A bronze medal trophy for third place winners.",
+      "price": 19.99,
+      "category": "Achievement",
+      "image_url": "http://example.com/images/bronze_medal_trophy.jpg",
+      "stock_quantity": 30,
+      "dimensions": {
+        "height": "8 inches",
+        "width": "3 inches"
+      },
+      "weight": "1.0 lbs",
+      "material": "Bronze",
+      "rating": 4.3
+    },
+    {
+      "id": 4,
+      "name": "Employee of the Month Trophy",
+      "description": "Award for the employee of the month.",
+      "price": 34.99,
+      "category": "Corporate",
+      "image_url": "http://example.com/images/employee_month_trophy.jpg",
+      "stock_quantity": 20,
+      "dimensions": {
+        "height": "15 inches",
+        "width": "6 inches"
+      },
+      "weight": "2.0 lbs",
+      "material": "Crystal",
+      "rating": 4.8
+    },
+    {
+      "id": 5,
+      "name": "Sports Excellence Trophy",
+      "description": "A trophy for excellence in sports.",
+      "price": 39.99,
+      "category": "Sports",
+      "image_url": "http://example.com/images/sports_excellence_trophy.jpg",
+      "stock_quantity": 25,
+      "dimensions": {
+        "height": "14 inches",
+        "width": "6 inches"
+      },
+      "weight": "2.5 lbs",
+      "material": "Gold-plated metal",
+      "rating": 4.9
+    },
+    {
+      "id": 6,
+      "name": "Custom Engraved Trophy",
+      "description": "A customizable trophy with custom engraving.",
+      "price": 49.99,
+      "category": "Custom",
+      "image_url": "http://example.com/images/custom_engraved_trophy.jpg",
+      "stock_quantity": 10,
+      "dimensions": {
+        "height": "16 inches",
+        "width": "7 inches"
+      },
+      "weight": "3.0 lbs",
+      "material": "Gold-plated metal and crystal",
+      "rating": 4.6
+    },
+    {
+      "id": 7,
+      "name": "Academic Excellence Trophy",
+      "description": "A trophy for academic achievements.",
+      "price": 29.99,
+      "category": "Academic",
+      "image_url": "http://example.com/images/academic_excellence_trophy.jpg",
+      "stock_quantity": 35,
+      "dimensions": {
+        "height": "12 inches",
+        "width": "5 inches"
+      },
+      "weight": "1.5 lbs",
+      "material": "Gold-plated metal",
+      "rating": 4.4
+    },
+    {
+      "id": 8,
+      "name": "Music Achievement Trophy",
+      "description": "Award for outstanding achievement in music.",
+      "price": 27.99,
+      "category": "Music",
+      "image_url": "http://example.com/images/music_achievement_trophy.jpg",
+      "stock_quantity": 40,
+      "dimensions": {
+        "height": "11 inches",
+        "width": "5 inches"
+      },
+      "weight": "1.3 lbs",
+      "material": "Gold-plated metal",
+      "rating": 4.7
+    },
+    {
+      "id": 9,
+      "name": "Science Fair Winner Trophy",
+      "description": "A trophy for winning the science fair.",
+      "price": 32.99,
+      "category": "Science",
+      "image_url": "http://example.com/images/science_fair_winner_trophy.jpg",
+      "stock_quantity": 25,
+      "dimensions": {
+        "height": "13 inches",
+        "width": "6 inches"
+      },
+      "weight": "1.8 lbs",
+      "material": "Gold-plated metal and crystal",
+      "rating": 4.8
+    },
+    {
+      "id": 10,
+      "name": "Dance Competition Trophy",
+      "description": "A trophy for winning a dance competition.",
+      "price": 35.99,
+      "category": "Dance",
+      "image_url": "http://example.com/images/dance_competition_trophy.jpg",
+      "stock_quantity": 30,
+      "dimensions": {
+        "height": "14 inches",
+        "width": "6 inches"
+      },
+      "weight": "2.0 lbs",
+      "material": "Gold-plated metal",
+      "rating": 4.6
+    },
+    {
+      "id": 11,
+      "name": "Community Service Trophy",
+      "description": "Award for outstanding community service.",
+      "price": 28.99,
+      "category": "Community",
+      "image_url": "http://example.com/images/community_service_trophy.jpg",
+      "stock_quantity": 40,
+      "dimensions": {
+        "height": "12 inches",
+        "width": "5 inches"
+      },
+      "weight": "1.4 lbs",
+      "material": "Gold-plated metal",
+      "rating": 4.7
+    },
+    {
+      "id": 12,
+      "name": "Art Excellence Trophy",
+      "description": "A trophy for excellence in art.",
+      "price": 31.99,
+      "category": "Art",
+      "image_url": "http://example.com/images/art_excellence_trophy.jpg",
+      "stock_quantity": 20,
+      "dimensions": {
+        "height": "13 inches",
+        "width": "6 inches"
+      },
+      "weight": "1.7 lbs",
+      "material": "Gold-plated metal and crystal",
+      "rating": 4.9
+    }
+  ]
+}
