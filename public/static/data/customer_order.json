@@ -1,0 +1,276 @@
+[
+  {
+    "userid": 1,
+    "username": "John Doe",
+    "phone_number": "123-456-7890",
+    "email": "johndoe@example.com",
+    "address": "123 Elm Street, Springfield, IL",
+    "number_of_products_purchased": 3,
+    "products_purchased": [
+      {
+        "product_name": "Laptop",
+        "quantity": 1,
+        "price": 1000
+      },
+      {
+        "product_name": "Mouse",
+        "quantity": 2,
+        "price": 25
+      },
+      {
+        "product_name": "Keyboard",
+        "quantity": 1,
+        "price": 50
+      }
+    ],
+    "total_items": 4,
+    "total_price": 1100
+  },
+  {
+    "userid": 2,
+    "username": "Jane Smith",
+    "phone_number": "234-567-8901",
+    "email": "janesmith@example.com",
+    "address": "456 Oak Street, Metropolis, NY",
+    "number_of_products_purchased": 2,
+    "products_purchased": [
+      {
+        "product_name": "Tablet",
+        "quantity": 1,
+        "price": 500
+      },
+      {
+        "product_name": "Case",
+        "quantity": 1,
+        "price": 50
+      }
+    ],
+    "total_items": 2,
+    "total_price": 550
+  },
+  {
+    "userid": 3,
+    "username": "Robert Johnson",
+    "phone_number": "345-678-9012",
+    "email": "robertj@example.com",
+    "address": "789 Pine Street, Gotham, NJ",
+    "number_of_products_purchased": 4,
+    "products_purchased": [
+      {
+        "product_name": "Smartphone",
+        "quantity": 1,
+        "price": 700
+      },
+      {
+        "product_name": "Charger",
+        "quantity": 2,
+        "price": 30
+      },
+      {
+        "product_name": "Headphones",
+        "quantity": 1,
+        "price": 100
+      }
+    ],
+    "total_items": 4,
+    "total_price": 860
+  },
+  {
+    "userid": 4,
+    "username": "Emily Davis",
+    "phone_number": "456-789-0123",
+    "email": "emilyd@example.com",
+    "address": "321 Birch Street, Star City, CA",
+    "number_of_products_purchased": 3,
+    "products_purchased": [
+      {
+        "product_name": "Monitor",
+        "quantity": 2,
+        "price": 200
+      },
+      {
+        "product_name": "HDMI Cable",
+        "quantity": 3,
+        "price": 15
+      }
+    ],
+    "total_items": 5,
+    "total_price": 430
+  },
+  {
+    "userid": 5,
+    "username": "Michael Brown",
+    "phone_number": "567-890-1234",
+    "email": "michaelb@example.com",
+    "address": "654 Cedar Street, Central City, TX",
+    "number_of_products_purchased": 1,
+    "products_purchased": [
+      {
+        "product_name": "Printer",
+        "quantity": 1,
+        "price": 150
+      }
+    ],
+    "total_items": 1,
+    "total_price": 150
+  },
+  {
+    "userid": 6,
+    "username": "Sarah Wilson",
+    "phone_number": "678-901-2345",
+    "email": "sarahw@example.com",
+    "address": "987 Maple Street, Keystone, WA",
+    "number_of_products_purchased": 2,
+    "products_purchased": [
+      {
+        "product_name": "Camera",
+        "quantity": 1,
+        "price": 800
+      },
+      {
+        "product_name": "Tripod",
+        "quantity": 1,
+        "price": 100
+      }
+    ],
+    "total_items": 2,
+    "total_price": 900
+  },
+  {
+    "userid": 7,
+    "username": "David Miller",
+    "phone_number": "789-012-3456",
+    "email": "davidm@example.com",
+    "address": "123 Ash Street, Starling, OH",
+    "number_of_products_purchased": 3,
+    "products_purchased": [
+      {
+        "product_name": "Desk",
+        "quantity": 1,
+        "price": 200
+      },
+      {
+        "product_name": "Chair",
+        "quantity": 1,
+        "price": 150
+      },
+      {
+        "product_name": "Lamp",
+        "quantity": 2,
+        "price": 30
+      }
+    ],
+    "total_items": 4,
+    "total_price": 410
+  },
+  {
+    "userid": 8,
+    "username": "Lisa Martinez",
+    "phone_number": "890-123-4567",
+    "email": "lisam@example.com",
+    "address": "456 Willow Street, Freeland, MA",
+    "number_of_products_purchased": 2,
+    "products_purchased": [
+      {
+        "product_name": "Bookshelf",
+        "quantity": 1,
+        "price": 100
+      },
+      {
+        "product_name": "Book",
+        "quantity": 5,
+        "price": 20
+      }
+    ],
+    "total_items": 6,
+    "total_price": 200
+  },
+  {
+    "userid": 9,
+    "username": "James Anderson",
+    "phone_number": "901-234-5678",
+    "email": "jamesa@example.com",
+    "address": "789 Elm Street, Star City, FL",
+    "number_of_products_purchased": 4,
+    "products_purchased": [
+      {
+        "product_name": "Watch",
+        "quantity": 1,
+        "price": 300
+      },
+      {
+        "product_name": "Band",
+        "quantity": 2,
+        "price": 50
+      },
+      {
+        "product_name": "Charger",
+        "quantity": 1,
+        "price": 20
+      }
+    ],
+    "total_items": 4,
+    "total_price": 420
+  },
+  {
+    "userid": 10,
+    "username": "Karen Taylor",
+    "phone_number": "012-345-6789",
+    "email": "karent@example.com",
+    "address": "321 Pine Street, National City, VA",
+    "number_of_products_purchased": 2,
+    "products_purchased": [
+      {
+        "product_name": "Vacuum Cleaner",
+        "quantity": 1,
+        "price": 200
+      },
+      {
+        "product_name": "Filters",
+        "quantity": 2,
+        "price": 25
+      }
+    ],
+    "total_items": 3,
+    "total_price": 250
+  },
+  {
+    "userid": 11,
+    "username": "Paul Wilson",
+    "phone_number": "123-456-7891",
+    "email": "paulw@example.com",
+    "address": "654 Spruce Street, New Troy, GA",
+    "number_of_products_purchased": 3,
+    "products_purchased": [
+      {
+        "product_name": "Blender",
+        "quantity": 1,
+        "price": 100
+      },
+      {
+        "product_name": "Cookbook",
+        "quantity": 2,
+        "price": 25
+      }
+    ],
+    "total_items": 3,
+    "total_price": 150
+  },
+  {
+    "userid": 12,
+    "username": "Anna Scott",
+    "phone_number": "234-567-8902",
+    "email": "annas@example.com",
+    "address": "987 Maple Street, Keystone, WA",
+    "number_of_products_purchased": 1,
+    "products_purchased": [
+      {
+        "product_name": "Coffee Maker",
+        "quantity": 1,
+        "price": 100
+      }
+    ],
+    "total_items": 1,
+    "total_price": 100
+  }
+]
