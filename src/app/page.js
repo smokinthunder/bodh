@@ -3,11 +3,13 @@ import Faq from "@/components/Homepage/Faq";
 import Heading from "@/components/Homepage/Heading";
 import Customer from "@/components/Homepage/Customers";
 import Footer from "@/components/Footer";
+import ProductScreen from "./components/products/ProductScreen";
 
 export default function Home() {
   return (
     <main>
       <Heading />
+      <ProductScreen />
       <Extra />
       <Faq />
       <Customer />
