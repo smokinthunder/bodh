@@ -1,5 +1,7 @@
 "use client";
 import { React, useState } from "react";
+import Image from "next/image";
+
 import {
   Card,
   CardContent,
@@ -13,18 +15,15 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import axios from "axios";
 
-
-export default function SignUpCard() {
-  const [username, setUsername] = useState("");
+export default function LoginCard() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [cpassword, setCpassword] = useState("");
   function handleSubmit() {
-    const data = {name:username , phone: phone, password: password , confirmPass: cpassword , role: "user" };
+    const data = { phone: phone, password: password, role: "admin" };
     console.log(data);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/auth/register",
+      url: "http://localhost:5000/api/auth/login",
       data: data,
       headers: {
         "Content-Type": "application/json",
@@ -41,21 +40,9 @@ export default function SignUpCard() {
   return (
     <Card className="flex flex-col items-center p-6">
       <CardHeader>
-        <CardTitle>Welcome!</CardTitle>
+        <CardTitle>Welcome Back Admin !</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid gap-2 mb-6">
-          <Label htmlFor="phone">User Name</Label>
-          <Input
-            id="username"
-            type="text"
-            value={username}
-            onChange={(e) => {
-              setUsername(e.currentTarget.value);
-            }}
-            required
-          />
-        </div>{" "}
         <div className="grid gap-2 mb-6">
           <Label htmlFor="phone">Phone Number</Label>
           <Input
@@ -80,20 +67,10 @@ export default function SignUpCard() {
             required
           ></Input>
         </div>
-        <div className="grid gap-2 mb-6">
-          <Label htmlFor="cpassword">Confirm Password</Label>
-          <Input
-            id="cpassword"
-            type="password"
-            value={cpassword}
-            onChange={(e) => {
-              setCpassword(e.currentTarget.value);
-            }}
-            required
-          ></Input>
-        </div>
-        <Button className="w-full" onClick={handleSubmit} >Create Account</Button>
-        <p className="text-xs text-muted-foreground  mt-4">
+        <Button className="w-full" onClick={handleSubmit}>
+          Continue
+        </Button>
+        <p className="text-xs text-muted-foreground  mb-6 mt-4">
           By Continuing you agree to our{" "}
           <a href="#" className="underline underline-offset-1 ">
             Terms of Service
@@ -103,8 +80,34 @@ export default function SignUpCard() {
             Privacy Policy
           </a>
         </p>
+        <p className="text-xs text-muted-foreground flex justify-center mt-14 ">
+          Or Sign up with
+        </p>
       </CardContent>
-      <CardFooter></CardFooter>
+      <CardFooter>
+        <div className="flex flex-col  ">
+          <div className="flex flex-row justify-between gap-4 mb-12">
+            <Image
+              src={"/assets/AuthPage/Facebook.png"}
+              alt="Facebook"
+              width={50}
+              height={50}
+            />
+            <Image
+              src={"/assets/AuthPage/Instagram.png"}
+              alt="Instagram"
+              width={50}
+              height={50}
+            />
+            <Image
+              src={"/assets/AuthPage/Twitter.png"}
+              alt="Twitter"
+              width={50}
+              height={50}
+            />
+          </div>
+        </div>
+      </CardFooter>
     </Card>
   );
 }

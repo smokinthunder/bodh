@@ -20,7 +20,7 @@ export default function SignUpCard() {
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   function handleSubmit() {
-    const data = {name:username , phone: phone, password: password , confirmPass: cpassword , role: "user" };
+    const data = {name:username , phone: phone, password: password , confirmPass: cpassword, role: "admin"};
     console.log(data);
     axios({
       method: "post",
@@ -41,7 +41,7 @@ export default function SignUpCard() {
   return (
     <Card className="flex flex-col items-center p-6">
       <CardHeader>
-        <CardTitle>Welcome!</CardTitle>
+        <CardTitle>Register as Admin</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid gap-2 mb-6">

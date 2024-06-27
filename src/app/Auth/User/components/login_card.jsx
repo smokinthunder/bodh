@@ -19,7 +19,7 @@ export default function LoginCard() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   function handleSubmit() {
-    const data = { phone: phone, password: password };
+    const data = { phone: phone, password: password , role: "user"};
     console.log(data);
     axios({
       method: "post",
