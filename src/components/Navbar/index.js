@@ -8,7 +8,8 @@ import { usePathname } from "next/navigation";
 const isAuthUser = false;
 
 export default function Navbar() {
-  const showNavbar = usePathname() === "/Auth/User"||"/Auth/Admin" ? false : true;
+  var showNavbar = usePathname() === "/Auth/User" ? false : true;
+  var showNavbar = usePathname() === "/Auth/Admin" ? false : showNavbar;
 
   if (showNavbar) {
     return (
