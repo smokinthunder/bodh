@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { addToCart } from "@/redux/slices/cartSlice";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -34,10 +34,12 @@ const AddToCart = ({
       router.push("/cart");
     }
   };
+  const pathname = usePathname();
+  const showQuantity = !(pathname === "/");
 
   return (
     <>
-      {product.countInStock > 0 && (
+      {showQuantity && product.countInStock > 0 && (
         <div className="mb-2 flex justify-between">
           <div>Qty</div>
           <div>
@@ -51,6 +53,7 @@ const AddToCart = ({
           </div>
         </div>
       )}
+
       <div>
         <Button className="w-full" onClick={addToCartHandler}>
           +
