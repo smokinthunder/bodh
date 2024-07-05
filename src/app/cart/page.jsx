@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "@/redux/slices/cartSlice";
+import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 export default function CartPage() {
   const dispatch = useDispatch();
@@ -21,7 +23,6 @@ export default function CartPage() {
 
   return (
     <div>
-      <h1 className="mb-4 text-xl"> Cart</h1>
       {loading ? (
         <div>Loading...</div>
       ) : cartItems.length === 0 ? (
@@ -29,83 +30,107 @@ export default function CartPage() {
           Cart is Empty.<Link href="/">Add items</Link>
         </div>
       ) : (
-        <div className="grid md:grid-cols-4 md:gap-5">
-          <div className="overflow-x-auto md:col-span-3">
-            <table className="min-w-full">
-              <thead>
-                <tr>
-                  <th className="p-5 text-left">Product</th>
-                  <th className="p-5 text-right">Quantity</th>
-                  <th className="p-5 text-right">Price</th>
-                  <th className="p-5">Remove</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cartItems.map((item) => (
-                  <tr key={item.id} className="border-b">
-                    <td>
-                      <Link
-                        href={`/product/${item.id}`}
-                        className="flex items-center"
-                      >
-                        <Image
-                          src="/assets/HomePage/trophie.png"
-                          alt={item.name}
-                          width={50}
-                          height={50}
-                          className="p-1"
-                        />
-                        {item.name}
-                      </Link>
-                    </td>
-                    <td className="p-5 text-right">
-                      <select
-                        value={item.qty}
-                        onChange={(e) =>
-                          addToCartHandler(item, Number(e.target.value))
-                        }
-                      >
-                        {[...Array(item.countInStock).keys()].map((x) => (
-                          <option key={x + 1} value={x + 1}>
-                            {x + 1}
-                          </option>
-                        ))}
-                      </select>
-                    </td>
-                    <td className="p-5 text-right">₹ {item.price}</td>
-                    <td className="p-5 text-center">
-                      <button
-                        className="default-button"
-                        onClick={() => removeFromCartHandler(item.id)}
-                      >
-                        X
-                      </button>
-                    </td>
+        <div>
+          <h1 className="text-4xl p-8">Your Cart</h1>
+          <div className="flex">
+            <div className="w-1/2 mx-5">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr>
+                    <th className="py-5 w-1/3 border-b border-gray-600 text-start">
+                      Product
+                    </th>
+                    <th className="py-5 w-1/3 border-b border-gray-600 text-center">
+                      Quantity
+                    </th>
+                    <th className="py-5 w-1/3 border-b border-gray-600 text-center">
+                      Price
+                    </th>
+                    <th className="py-5 w-1/3 border-b border-gray-600 text-center">
+                      Remove
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <div className="card p-5">
-              <ul>
-                <li>
-                  <div className="pb-3 text-xl">
-                    Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)}): ₹
-                    {itemsPrice}
-                  </div>
-                </li>
-                <li>
-                  <button
-                    className="primary-button w-full"
-                    onClick={() => router.push("/shipping")}
-                  >
-                    Proceed to checkout
-                  </button>
-                </li>
-              </ul>
+                </thead>
+              </table>
+              <div className="overflow-y-auto h-96">
+                {" "}
+                {/* Adjust height as needed */}
+                <table className="w-full border-collapse">
+                  <tbody>
+                    {cartItems.map((item) => (
+                      <tr
+                        className="h-16 border-b border-gray-300 text-center"
+                        key={item.id}
+                      >
+                        <td className="flex items-center">
+                          <Image
+                            src="/assets/HomePage/trophie.png"
+                            alt={item.name}
+                            height={100}
+                            width={100}
+                          />
+                          <p>{item.name}</p>
+                        </td>
+                        <td className="text-center">
+                          <div className="border w-max p-1 inline-block">
+                            <select
+                              value={item.qty}
+                              onChange={(e) =>
+                                addToCartHandler(item, Number(e.target.value))
+                              }
+                            >
+                              {[...Array(item.countInStock).keys()].map((x) => (
+                                <option key={x + 1} value={x + 1}>
+                                  {x + 1}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        </td>
+                        <td>₹{item.price}</td>
+                        <td className="p-5 text-center">
+                          <button
+                            className="default-button"
+                            onClick={() => removeFromCartHandler(item.id)}
+                          >
+                            X
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="border-4 rounded-xl h-max border-black p-4 w-1/3 mx-32 flex flex-col gap-3">
+              <p>Cart Summary</p>
+              <div className="border-2 rounded-xl w-full flex justify-between p-4">
+                <p>Discount</p>
+                <p>₹0</p>
+              </div>
+              <div className="border-2 rounded-xl w-full flex justify-between p-4">
+                <p>Tax</p>
+                <p>₹0</p>
+              </div>
+              <div className="border-2 rounded-xl w-full flex justify-between p-4">
+                <p>Shipping</p>
+                <p>Free</p>
+              </div>
+              <div className="border-b-2 w-full flex justify-between p-4">
+                <p>Subtotal</p>
+                <p>
+                  ({cartItems.reduce((a, c) => a + c.qty, 0)}): ₹{itemsPrice}
+                </p>
+              </div>
+              <Button
+                onClick={() => router.push("/shipping")}
+                className="text-white bg-black rounded-lg w-full p-6"
+              >
+                Checkout
+              </Button>
             </div>
           </div>
+          <Footer></Footer>
         </div>
       )}
     </div>
