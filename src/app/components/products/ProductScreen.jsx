@@ -13,7 +13,7 @@ export default function ProductScreen() {
       </div>
       <div className="grid grid-cols-3 justify-items-center my-32   ">
         {products["products"].map((product) => (
-          <ProductComponents key={product.id} product={product.name} />
+          <ProductComponents key={product.id} product={product} />
         ))}
       </div>
       <Link href="/product " className=" w-max mx-auto   h-max">

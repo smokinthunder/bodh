@@ -14,7 +14,9 @@
       },
       "weight": "1.5 lbs",
       "material": "Gold-plated metal",
-      "rating": 4.7
+      "rating": 4.7,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 2,
@@ -30,7 +32,9 @@
       },
       "weight": "1.2 lbs",
       "material": "Silver-plated metal",
-      "rating": 4.5
+      "rating": 4.5,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 3,
@@ -46,7 +50,9 @@
       },
       "weight": "1.0 lbs",
       "material": "Bronze",
-      "rating": 4.3
+      "rating": 4.3,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 4,
@@ -62,7 +68,9 @@
       },
       "weight": "2.0 lbs",
       "material": "Crystal",
-      "rating": 4.8
+      "rating": 4.8,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 5,
@@ -78,7 +86,9 @@
       },
       "weight": "2.5 lbs",
       "material": "Gold-plated metal",
-      "rating": 4.9
+      "rating": 4.9,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 6,
@@ -94,7 +104,9 @@
       },
       "weight": "3.0 lbs",
       "material": "Gold-plated metal and crystal",
-      "rating": 4.6
+      "rating": 4.6,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 7,
@@ -110,7 +122,9 @@
       },
       "weight": "1.5 lbs",
       "material": "Gold-plated metal",
-      "rating": 4.4
+      "rating": 4.4,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 8,
@@ -126,7 +140,9 @@
       },
       "weight": "1.3 lbs",
       "material": "Gold-plated metal",
-      "rating": 4.7
+      "rating": 4.7,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 9,
@@ -142,7 +158,9 @@
       },
       "weight": "1.8 lbs",
       "material": "Gold-plated metal and crystal",
-      "rating": 4.8
+      "rating": 4.8,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 10,
@@ -158,7 +176,9 @@
       },
       "weight": "2.0 lbs",
       "material": "Gold-plated metal",
-      "rating": 4.6
+      "rating": 4.6,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 11,
@@ -174,7 +194,9 @@
       },
       "weight": "1.4 lbs",
       "material": "Gold-plated metal",
-      "rating": 4.7
+      "rating": 4.7,
+      "numReviews": 5,
+      "countInStock": 50
     },
     {
       "id": 12,
@@ -190,7 +212,9 @@
       },
       "weight": "1.7 lbs",
       "material": "Gold-plated metal and crystal",
-      "rating": 4.9
+      "rating": 4.9,
+      "numReviews": 5,
+      "countInStock": 50
     }
   ]
 }

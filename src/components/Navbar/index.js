@@ -2,14 +2,15 @@
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-
+import { useSelector } from "react-redux";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const isAuthUser = false;
+const isAuthUser = true;
 
 export default function Navbar() {
-  var showNavbar = usePathname() === "/Auth/User" ? false : true;
-  var showNavbar = usePathname() === "/Auth/Admin" ? false : showNavbar;
+  const pathname = usePathname();
+  const showNavbar = !(pathname === "/Auth/User" || pathname === "/Auth/Admin");
+  const { loading, cartItems } = useSelector((state) => state.cart);
 
   if (showNavbar) {
     return (
@@ -29,6 +30,9 @@ export default function Navbar() {
             <div className="flex md:order-2 gap-2">
               {isAuthUser ? (
                 <div className="flex px-6">
+                  <span className="cart-badge">
+                    {loading ? "" : cartItems.reduce((a, c) => a + c.qty, 0)}
+                  </span>
                   <Link href="/cart" className="pr-4">
                     <Image
                       src="/assets/icons8-shopping-cart-50.png"
