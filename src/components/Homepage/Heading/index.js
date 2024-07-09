@@ -9,17 +9,17 @@ const Heading = () => {
         <img
           loading="lazy"
           src="/assets/winner-concept-with-all-places-prizes 1.png"
-          className="w-full aspect-[2.15] max-w-[1500px] max-md:max-w-full"
+          className="w-screen aspect-[2.15] "
         />
         <div className="absolute inset-0 flex flex-col justify-center pb-36 p-8">
-          <h2 className="font-bold text-4xl max-w-md text-black mb-4">
+          <h2 className="font-bold text-6xl max-w-[45rem] font-Rokkitt text-black mb-12 mt-5 ">
             Affordable Prices for High-Quality Awards
           </h2>
-          <p className="max-w-md text-black">
+          <p className="max-w-[36rem] text-xl text-black">
             Get the best value for your money with our competitively priced
             Trophies and Medals
           </p>
-          <Button className="w-fit m-4">
+          <Button className="w-fit px-12 py-6 ml-4 mt-12">
             <Link href="/product">Shop Now</Link>
           </Button>
         </div>
