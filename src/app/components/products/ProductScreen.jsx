@@ -1,8 +1,8 @@
 import React from "react";
 import ProductComponents from "./ProductComponents";
 import products from "../../../../public/static/data/product_list.json";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+// import { Button } from "@/components/ui/button";
+// import Link from "next/link";
 export default function ProductScreen() {
   return (
     <div className="flex flex-col  ">
@@ -16,11 +16,11 @@ export default function ProductScreen() {
           <ProductComponents key={product.id} product={product} />
         ))}
       </div>
-      <Link href="/product " className=" w-max mx-auto   h-max">
+      {/* <Link href="/product " className=" w-max mx-auto   h-max">
         <Button className="mb-32 w-max mx-auto py-5 px-10 bg-red-600 hover:bg-red-700  ">
           View More..
         </Button>
-      </Link>
+      </Link> */}
     </div>
   );
 }

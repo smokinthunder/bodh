@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { Rokkitt } = require("next/font/google");
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -9,6 +10,9 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      Rokkitt: ["Rokkitt", "serif"],
+    },
     container: {
       center: true,
       padding: "2rem",

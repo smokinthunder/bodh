@@ -5,7 +5,7 @@ import Heading from "@/components/Homepage/Heading";
 import Customer from "@/components/Homepage/Customers";
 import Footer from "@/components/Footer";
 import ProductScreen from "./components/products/ProductScreen";
-import NewArrivals from "./components/products/NewArrivals";
+// import NewArrivals from "./components/products/NewArrivals";
 import { useEffect } from "react";
 import { hideLoading } from "@/redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
@@ -19,7 +19,7 @@ export default function Home() {
     <main>
       <Heading />
       <ProductScreen />
-      <NewArrivals />
+      {/* <NewArrivals /> */}
       <Extra />
       <Faq />
       <Customer />
