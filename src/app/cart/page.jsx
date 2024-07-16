@@ -62,7 +62,7 @@ export default function CartPage() {
                       className="h-16 border-b border-gray-300 text-center"
                       key={item.id}
                     >
-                      <td className="flex items-center">
+                      <td className="flex flex-col items-start">
                         <Image
                           src="/assets/HomePage/trophie.png"
                           alt={item.name}
@@ -71,7 +71,7 @@ export default function CartPage() {
                         />
                         <p>{item.name}</p>
                       </td>
-                      <td className="text-center">
+                      <td className="text-left pr-6">
                         <div className="border w-max p-1 inline-block">
                           <select
                             value={item.qty}
@@ -88,7 +88,7 @@ export default function CartPage() {
                         </div>
                       </td>
                       <td>₹{item.price}</td>
-                      <td className="p-5 text-center">
+                      <td className="p-5 text-right">
                         <button
                           className="default-button"
                           onClick={() => removeFromCartHandler(item.id)}
