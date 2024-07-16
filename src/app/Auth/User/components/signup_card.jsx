@@ -20,7 +20,7 @@ export default function SignUpCard() {
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   function handleSubmit() {
-    const data = {name:username , phone: phone, password: password , confirmPass: cpassword , role: "user" };
+    const data = {name:username , phone: phone, password: password , confirmPass: cpassword };
     console.log(data);
     axios({
       method: "post",

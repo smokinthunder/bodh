@@ -9,7 +9,7 @@ const Heading = () => {
         <img
           loading="lazy"
           src="/assets/winner-concept-with-all-places-prizes 1.png"
-          className="w-screen aspect-[2.15] "
+          className="w-full   "
         />
         <div className="absolute inset-0 flex flex-col justify-center pb-36 p-8">
           <h2 className="font-bold text-6xl max-w-[45rem] font-Rokkitt text-black mb-12 mt-5 ">

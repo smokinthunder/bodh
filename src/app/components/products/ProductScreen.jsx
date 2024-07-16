@@ -4,7 +4,7 @@ import products from "../../../../public/static/data/product_list.json";
 export default function ProductScreen() {
   return (
     <div className="flex flex-col  ">
-      <div className="h-32 bg-red-500 flex justify-center items-center w-screen sticky top-24 mt-28">
+      <div className="h-32  hover:bg-red-500 flex justify-center items-center w-screen sticky top-24 mt-28">
         <p className=" opacity-80   text-6xl bg-[#E12828] border-8 border-red-800 px-6 py-2 rounded-2xl text-white  font-serif">
           Our Products
         </p>

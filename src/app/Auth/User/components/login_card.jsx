@@ -1,6 +1,7 @@
 "use client";
 import { React, useState } from "react";
 import Image from "next/image";
+import Cookies from "js-cookie";
 
 import {
   Card,
@@ -14,27 +15,46 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import axios from "axios";
+import { ApiUrl } from "@/Constants/Api";
 
 export default function LoginCard() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  function handleSubmit() {
-    const data = { phone: phone, password: password , role: "user"};
+  async function handleSubmit() {
+    const data = { phone: phone, password: password };
     console.log(data);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/auth/login",
+      url: ApiUrl + "api/auth/login",
       data: data,
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((response) => {
-        console.log(response.data);
+        console.log("Login Successfull");
+        // console.log(response.data['token']);
+        Cookies.set("token", response.data["token"], { expires: 0.5 });
+        if (response.data["token"]) {
+          window.location.href = "../../";
+        }
+        console.log("Token:", Cookies.get("token"));
       })
       .catch(function (error) {
+        console.log("Login Failed");
         console.error(error);
       });
+    // try {
+    //   const response = await axios.get("http://192.168.11.73:5000/api/auth/me", {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'Authorization': `Bearer ${Cookies.get('token')}`,
+    //     },
+    //   });
+    //   console.log(response.data);
+    // } catch (error) {
+    //   throw new Error(error.response ? error.response.data : error.message);
+    // }
   }
 
   return (

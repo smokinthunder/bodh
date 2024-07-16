@@ -1,11 +1,19 @@
 "use client";
 import Image from "next/image";
+import Cookies from "js-cookie";
+
+import { ApiUrl } from "@/Constants/Api";
 
 import { Button } from "@/components/ui/button";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const isAuthUser = true;
+import axios from "axios";
+
+import ProfileAvatar from "./profileAvatar";
+// import {profileAvatar} from "@/components/Navbar/profileAvatar"
+
+const isAuthUser = !!Cookies.get("token");
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -41,12 +49,7 @@ export default function Navbar() {
                       height={26}
                     />
                   </Link>
-
-                  <Link href="/">
-                    <Button className="bg-black text-white" variant="outline">
-                      Logout
-                    </Button>
-                  </Link>
+                  <ProfileAvatar />
                 </div>
               ) : (
                 <Link href="/Auth/User">
@@ -71,6 +74,7 @@ export default function Navbar() {
                 <li className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0">
                   <Link href="/gallery">Gallery</Link>
                 </li>
+
                 <li className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0">
                   <Link href="/blog">Blog</Link>
                 </li>

@@ -6,6 +6,9 @@ import SignUpCard from "./components/signup_card";
 import Link from "next/link";
 
 export default function AuthUser() {
+
+  
+
   return (
     <div className="columns-2 gap-0 h-screen w-screen">
       <div className="  h-screen  flex justify-center items-center">

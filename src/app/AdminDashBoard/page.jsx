@@ -5,6 +5,9 @@ import React from "react";
 import DashboardOrderTable from "./components/DashboardOrderTable";
 
 export default function AdminDashBoard() {
+
+  
+
   return (
     <div className="bg-[#FFECCF] h-svh w-svw px-20 py-7">
       <p className="text-3xl font-semibold  ml-7 mb-2 ">Admin Panel</p>
