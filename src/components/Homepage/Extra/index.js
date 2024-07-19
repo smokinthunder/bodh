@@ -9,10 +9,8 @@ const Extra = () => {
         <img
           loading="lazy"
           src="/assets/image 4.png"
-          className="w-screen aspect-[2.15] mt-24"
+          className="w-screen aspect-[2.15] "
         />
-        <div className="absolute inset-0 flex flex-col justify-center pb-36 p-8  ">
-          <h2 className="font-bold text-6xl max-w-[45rem] font-Rokkitt text-white mb-12">
         <div className="absolute inset-0 flex flex-col justify-center pb-36 p-8  ">
           <h2 className="font-bold text-6xl max-w-[45rem] font-Rokkitt text-white mb-12">
             We have everything that you need
