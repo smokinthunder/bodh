@@ -20,9 +20,7 @@ export default function ProductComponents({ product }) {
           </div>
         </div>
       </Link>
-      <div className="flex flex-col items-center justify-center p-5">
-        <ProductRate rate={product.rating} count={product.numReviews} />
-        <p>₹: {product.price}</p>
+      <div className="flex flex-col items-center justify-center pt-6 pb-2">
         <AddToCart
           product={product}
           showQty={false}
