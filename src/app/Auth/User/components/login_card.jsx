@@ -44,17 +44,6 @@ export default function LoginCard() {
         console.log("Login Failed");
         console.error(error);
       });
-    // try {
-    //   const response = await axios.get("http://192.168.11.73:5000/api/auth/me", {
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'Authorization': `Bearer ${Cookies.get('token')}`,
-    //     },
-    //   });
-    //   console.log(response.data);
-    // } catch (error) {
-    //   throw new Error(error.response ? error.response.data : error.message);
-    // }
   }
 
   return (

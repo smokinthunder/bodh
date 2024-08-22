@@ -40,7 +40,13 @@ export default function ProfileAvatar() {
         },
       })
         .then((response) => {
+          console.log("Token Found: ", token);
+          console.log(response.data);
           console.log("USER DATA");
+          console.log(ApiUrl + "api/auth/me");
+          console.log(response.data["name"]);
+          console.log(response.data["messsage"]);
+
           console.log(response.data["name"][0]);
           setName(response.data["name"]);
         })
@@ -64,7 +70,34 @@ export default function ProfileAvatar() {
   }
 
   if (!name) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Avatar className="bg-gray-600 ">
+              <AvatarFallback className="text-white  text-2xl">
+                !
+              </AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-white">
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>
+              <button
+                onClick={() => {
+                  Cookies.remove("token");
+                  window.location.reload();
+                }}
+              >
+                Logout
+              </button>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+    );
   }
 
   return (
