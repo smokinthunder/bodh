@@ -9,10 +9,15 @@ export default function ProductScreen() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log(ApiUrl + "api/products");
     axios
-      .get(ApiUrl + "api/products") // Replace with your API endpoint
-      .then((response) => {
-        setProducts(response.data); // Adjust to match your API's response structure
+    .get(ApiUrl + "api/products") // Replace with your API endpoint
+    .then((response) => {
+      // console.log(response.data); 
+      setProducts(response.data); // Adjust to match your API's response structure
+      // console.log("Woo"+response.data);
+      // console.log("Wee"+response.data.images);
+      // console.log(ApiUrl+ products.images[0]);
         setLoading(false);
       })
       .catch((error) => {

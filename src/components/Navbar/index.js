@@ -2,13 +2,11 @@
 import Image from "next/image";
 import Cookies from "js-cookie";
 
-import { ApiUrl } from "@/Constants/Api";
 
 import { Button } from "@/components/ui/button";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import axios from "axios";
 
 import ProfileAvatar from "./profileAvatar";
 // import {profileAvatar} from "@/components/Navbar/profileAvatar"
